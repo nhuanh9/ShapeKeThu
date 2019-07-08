@@ -1,4 +1,4 @@
-public class Rectangle extends Shape {
+public class Rectangle extends Shape implements Resizeable {
     private double width = 1.0;
     private double length = 1.0;
 
@@ -48,5 +48,9 @@ public class Rectangle extends Shape {
                 + getLength()
                 + ", which is a subclass of "
                 + super.toString();
+    }
+    public void resize(double percent){
+        this.width *= (1+percent);
+        this.length *= (1+percent);
     }
 }
